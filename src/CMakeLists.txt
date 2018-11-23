@@ -1,5 +1,5 @@
 set(SRCS
-    ${PROJECT_SOURCE_DIR}/src/zip_stream.cpp
+    ${PROJECT_SOURCE_DIR}/src/zip_stream.cc
     )
 add_library(zip_stream STATIC ${SRCS})
 
@@ -14,7 +14,7 @@ if (BUILD_UNIT_TESTS)
     endif()
     include_directories(${GTEST_INCLUDE_PATH})
 
-    add_executable(zip_stream_test ${PROJECT_SOURCE_DIR}/src/zip_stream_test.cpp)
+    add_executable(zip_stream_test ${PROJECT_SOURCE_DIR}/src/zip_stream_test.cc)
     target_link_libraries(zip_stream_test 
         zip_stream
         ${GTEST_MAIN_LIBRARY}
